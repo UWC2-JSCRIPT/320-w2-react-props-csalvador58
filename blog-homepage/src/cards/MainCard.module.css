@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+}
+
+img {
+    width: 40%;
+    height: 25vh;
+    object-fit: cover;
+}
