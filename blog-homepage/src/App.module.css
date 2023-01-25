@@ -37,13 +37,18 @@
   }
 } */
 
-.upperContainer {
+
+.container {
   display: grid;
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.upper {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.lowerContainer {
-  display: grid;
+.lower {
   grid-template-columns: repeat(3, 1fr);
 }
 
