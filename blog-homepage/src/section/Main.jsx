@@ -23,6 +23,7 @@ function Main({ classes }) {
               date={formattedDate.join(" ")}
               description={article.description}
               image={article.image}
+              website={article.link}
               memberPreview={article.memberPreview}
               title={article.title}
             />

@@ -169,3 +169,7 @@
   }
 
 }
+
+.bookmarked {
+  fill: green;
+}
