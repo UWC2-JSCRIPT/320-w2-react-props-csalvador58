@@ -4,7 +4,7 @@ import SectionHeader from "./section/SectionHeader";
 function App() {
   return (
     <div>
-      <SectionHeader text='For you'/>
+      {/* <SectionHeader text='For you'/> */}
       <Main />
       <SectionHeader text='In case you missed it'/>
       {/* <div className={classes.container + " " + classes.lower}>
