@@ -16,3 +16,33 @@
 .lower {
   grid-template-columns: repeat(3, 1fr);
 }
+
+
+@media screen and (max-width: 1145px) {
+  .app-container {
+    padding: 1rem 8rem 1rem 8rem;
+  }
+
+  .upper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .lower {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .lower {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .app-container {
+    padding: 1rem 2rem 1rem 2rem;
+  }
+
+  .lower {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
