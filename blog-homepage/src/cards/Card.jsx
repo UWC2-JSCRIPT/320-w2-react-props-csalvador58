@@ -16,8 +16,7 @@ function Card({
   memberPreview,
   title,
 }) {
-    // console.log(isCardMain)
-    // console.log(isCardMain ? classes.card : classes.card + " alt")
+    
   return (
     <div className={isCardMain ? classes.card : classes["card-alt"]}>
       <img className={isCardMain ? "" : classes["img-alt"]} src={image} alt="main article jpeg" />

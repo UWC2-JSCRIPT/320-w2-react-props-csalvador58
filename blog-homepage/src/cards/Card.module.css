@@ -1,6 +1,6 @@
 .card {
   height: 300px;
-  min-width: 500px;
+  min-width: 535px;
   display: flex;
   overflow: auto;
   border-width: 2px;
@@ -9,8 +9,8 @@
 }
 
 .card-alt {
-  height: 350px;
-  min-width: 250px;
+  height: 375px;
+  min-width: 350px;
   flex-direction: column;
 
   border-width: 2px;
@@ -29,8 +29,8 @@
 .content-alt {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: minmax(25px, 75px);
-  padding: 0 20px;
+  grid-auto-rows: minmax(25px, 80px);
+  padding: 0 1rem;
 }
 
 .main {
@@ -74,7 +74,7 @@
 .author h3,
 .author p {
   margin: 0;
-  padding: 2px 0;
+  padding: 0.25rem 0;
 }
 
 .card img {
@@ -83,7 +83,7 @@
 }
 
 .img-alt {
-  height: 40%;
+  height: 35%;
   width: 100%;
   object-fit: cover;
 }
