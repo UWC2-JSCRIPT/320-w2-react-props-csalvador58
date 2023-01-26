@@ -5,7 +5,6 @@ import classes from "./App.module.css"
 function App() {
   return (
     <div>
-      {/* <SectionHeader text='For you'/> */}
       <Main classes={classes}/>
       <Lower classes={classes}/>
     </div>
