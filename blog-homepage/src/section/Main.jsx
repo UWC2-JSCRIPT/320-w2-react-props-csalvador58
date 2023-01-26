@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Card from "../cards/Card"
-// import MainCard from "../cards/MainCard";
-import articles from "../your-articles.json";
 import SectionHeader from "../section/SectionHeader";
+import PropTypes from "prop-types";
+import articles from "../your-articles.json";
 
 function Main({ classes }) {
   return (
@@ -14,18 +13,6 @@ function Main({ classes }) {
           const date = new Date(article.postedDate);
           const formattedDate = date.toDateString().split(" ").slice(1, -1);
           return (
-            // <MainCard
-            //   key={index}
-            //   articleLength={article.minutesToRead}
-            //   audio={article.hasAudioAvailable}
-            //   author={article.author.name}
-            //   authorImage={article.author.image}
-            //   date={formattedDate.join(" ")}
-            //   description={article.description}
-            //   image={article.image}
-            //   memberPreview={article.memberPreview}
-            //   title={article.title}
-            // />
             <Card
               key={index}
               articleLength={article.minutesToRead}

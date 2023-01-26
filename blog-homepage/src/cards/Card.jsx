@@ -1,7 +1,7 @@
 import React from "react";
 import Audio from "../component/Audio";
 import PropTypes from "prop-types";
-import classes from "./MainCard.module.css";
+import classes from "./Card.module.css";
 import bookmarkIcon from "../icons/bookmark.svg";
 
 function Card({
@@ -16,11 +16,13 @@ function Card({
   memberPreview,
   title,
 }) {
+    // console.log(isCardMain)
+    // console.log(isCardMain ? classes.card : classes.card + " alt")
   return (
-    <div className={`${classes["card-container"]} ${!isCardMain ? "alt" : ""}`}>
-      <img src={image} alt="main article jpeg" />
-      <div className={`${classes.content} ${!isCardMain ? "alt" : ""}`}>
-        <div className={`${classes["content-main"]} ${!isCardMain ? "alt" : ""}`}>
+    <div className={isCardMain ? classes.card : classes["card-alt"]}>
+      <img className={isCardMain ? "" : classes["img-alt"]} src={image} alt="main article jpeg" />
+      <div className={isCardMain ? classes.content : classes["content-alt"]}>
+        <div className={isCardMain ? classes.main : classes["main-alt"]}>
           {isCardMain && audio && <Audio member={memberPreview} />}
           {!isCardMain && memberPreview && (
             <div className={classes.star}>★ Member Preview</div>
@@ -28,14 +30,14 @@ function Card({
           <h2>{title}</h2>
           <p>{description}</p>
         </div>
-        <div className={`${classes["content-avatar"]}  ${!isCardMain ? "alt" : ""}`}>
-          <img className={!isCardMain ? "alt" : ""} src={authorImage} alt="Avatar portrait of author" />
+        <div className={isCardMain ? classes.avatar : classes["avatar-alt"]}>
+          <img className={isCardMain ? "" : "alt"} src={authorImage} alt="Avatar portrait of author" />
         </div>
-        <div className={classes["content-author"]}>
+        <div className={classes.author}>
           <h3>{author}</h3>
           <p>{`${date} • ${articleLength} min read`}</p>
         </div>
-        <div className={classes["content-icon"]}>
+        <div className={classes.icon}>
           <img src={bookmarkIcon} alt="bookmark icon" />
         </div>
       </div>
