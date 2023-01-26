@@ -1,26 +1,25 @@
 import React from "react";
-import Audio from '../component/Audio'
+import classes from "./LowerCard.module.css";
 import PropTypes from 'prop-types'
-import classes from "./MainCard.module.css";
 import bookmarkIcon from "../icons/bookmark.svg";
 
-function MainCard({
-  articleLength,
-  audio,
-  author,
-  authorImage,
-  date,
-  description,
-  image,
-  memberPreview,
-  title,
-}) {
+function LowerCard({
+    articleLength,
+    audio,
+    author,
+    authorImage,
+    date,
+    description,
+    image,
+    memberPreview,
+    title,
+  }) {
   return (
     <div className={classes["card-container"]}>
       <img src={image} alt="main article jpeg" />
       <div className={classes.content}>
         <div className={classes["content-main"]}>
-          {audio && <Audio member={memberPreview}/>}
+          {memberPreview && <div className={classes.star}>★ Member Preview</div>}
           <h2>{title}</h2>
           <p>{description}</p>
         </div>
@@ -39,7 +38,7 @@ function MainCard({
   );
 }
 
-MainCard.propTypes = {
+LowerCard.propTypes = {
     articleLength:PropTypes.number.isRequired,
     audio: PropTypes.bool.isRequired,
     author: PropTypes.string.isRequired,
@@ -51,4 +50,4 @@ MainCard.propTypes = {
     title: PropTypes.string.isRequired,
 }
 
-export default MainCard;
+export default LowerCard;

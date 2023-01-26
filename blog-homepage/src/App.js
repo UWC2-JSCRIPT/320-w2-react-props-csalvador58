@@ -1,17 +1,13 @@
+import Lower from "./section/Lower";
 import Main from "./section/Main";
-import SectionHeader from "./section/SectionHeader";
+import classes from "./App.module.css"
 
 function App() {
   return (
     <div>
       {/* <SectionHeader text='For you'/> */}
-      <Main />
-      <SectionHeader text='In case you missed it'/>
-      {/* <div className={classes.container + " " + classes.lower}>
-        <div className={classes.card1}>Div1</div>
-        <div className={classes.card2}>Div2</div>
-        <div className={classes.card3}>Div3</div>
-      </div> */}
+      <Main classes={classes}/>
+      <Lower classes={classes}/>
     </div>
   );
 }

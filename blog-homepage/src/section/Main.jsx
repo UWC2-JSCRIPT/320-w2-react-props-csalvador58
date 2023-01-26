@@ -1,10 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 import MainCard from "../cards/MainCard";
-import classes from "./Main.module.css";
+// import classes from "./Main.module.css";
 import articles from "../your-articles.json";
 import SectionHeader from "../section/SectionHeader";
 
-function Main() {
+function Main({ classes }) {
   return (
     <>
       <SectionHeader text="For you" />
@@ -15,23 +16,25 @@ function Main() {
           return (
             <MainCard
               key={index}
+              articleLength={article.minutesToRead}
               audio={article.hasAudioAvailable}
               author={article.author.name}
               authorImage={article.author.image}
               date={formattedDate.join(" ")}
               description={article.description}
               image={article.image}
-              articleLength={article.minutesToRead}
+              memberPreview={article.memberPreview}
               title={article.title}
             />
           );
         })}
-        {/* <div className={classes.card2}>Div2</div>
-      <div className={classes.card3}>Div3</div>
-      <div className={classes.card4}>Div4</div> */}
       </div>
     </>
   );
 }
+
+Main.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
 
 export default Main;

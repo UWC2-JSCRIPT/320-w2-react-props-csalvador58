@@ -1,8 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import classes from "./Audio.module.css";
-import audioIcon from "../icons/volume.svg";
 
-function Audio() {
+function Audio({ member }) {
   return (
     <div className={classes.wrapper}>
       <div className={classes.volume}>
@@ -12,9 +12,13 @@ function Audio() {
         />
         <p>Audio available</p>
       </div>
-      <div className={classes.star}>★</div>
+      {member && <div className={classes.star}>★</div>}
     </div>
   );
 }
+
+Audio.propTypes = {
+  member: PropTypes.bool.isRequired,
+};
 
 export default Audio;
