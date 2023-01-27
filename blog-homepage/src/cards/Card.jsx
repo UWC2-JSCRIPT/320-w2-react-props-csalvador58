@@ -36,6 +36,7 @@ function Card({
         alt="main article jpeg"
         onClick={() => openSiteInTab(website)}
       />
+      {/* {Create grid. Grid format is based on card rendering in Main or Lower section.} */}
       <div className={isCardMain ? classes.content : classes["content-alt"]}>
         <div className={isCardMain ? classes.main : classes["main-alt"]}>
           {isCardMain && audio && <Audio member={memberPreview} />}
