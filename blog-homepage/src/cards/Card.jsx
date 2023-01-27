@@ -47,11 +47,20 @@ function Card({
           <p onClick={() => openSiteInTab(website)}>{description}</p>
         </div>
         <div className={isCardMain ? classes.avatar : classes["avatar-alt"]}>
-          <img
-            className={isCardMain ? "" : "alt"}
-            src={authorImage}
-            alt="Avatar portrait of author"
-          />
+          {!memberPreview && (
+            <img src={authorImage} alt="Avatar portrait of author" />
+          )}
+          {memberPreview && (
+            <img
+              style={{
+                outlineStyle: "solid",
+                outlineColor: "#90EE90",
+                outlineWidth: "medium",
+              }}
+              src={authorImage}
+              alt="Avatar portrait of author"
+            />
+          )}
         </div>
         <div className={classes.author}>
           <h3>{author}</h3>

@@ -120,7 +120,6 @@
   .content {
     grid-auto-rows: minmax(25px, 60px);
     padding: 0 1rem;
-
   }
 
   .content-alt {
