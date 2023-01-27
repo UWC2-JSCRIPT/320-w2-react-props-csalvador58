@@ -20,7 +20,7 @@
 
 @media screen and (max-width: 1145px) {
   .app-container {
-    padding: 1rem 8rem 1rem 8rem;
+    padding: 1rem 8rem;
   }
 
   .upper {
@@ -39,7 +39,7 @@
 
 @media screen and (max-width: 414px) {
   .app-container {
-    padding: 1rem 2rem 1rem 2rem;
+    padding: 1rem 2rem;
   }
 
   .lower {
