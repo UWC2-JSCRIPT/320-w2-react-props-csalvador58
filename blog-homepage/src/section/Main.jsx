@@ -1,10 +1,20 @@
 import React from "react";
-import Card from "../cards/Card"
+import Card from "../cards/Card";
 import SectionHeader from "../section/SectionHeader";
 import PropTypes from "prop-types";
 import articles from "../your-articles.json";
 
 function Main({ classes }) {
+  const altTags = {
+    "https://cdn-images-1.medium.com/max/800/1*PIC-U670COEqmGwt4cvXAA.jpeg":
+      "Body view of person creating art with paint all over hands",
+    "https://cdn-images-1.medium.com/max/800/1*KHs6OgOb7_aJhmQvOKj_dg.jpeg":
+      "Chart to create an auto-publicist marketing sequence.",
+    "https://cdn-images-1.medium.com/max/800/1*cioT9CBBV2s0svet9LqKZA.png":
+      "Playground swings with graffiti art wall background.",
+    "https://cdn-images-1.medium.com/max/800/1*_NTwW2r8Konom4d5vIPkuw.png":
+      "Drawing of a lady standing on one foot.",
+  };
   return (
     <>
       <SectionHeader text="For you" />
@@ -23,6 +33,7 @@ function Main({ classes }) {
               date={formattedDate.join(" ")}
               description={article.description}
               image={article.image}
+              imageAlt={altTags[article.image]}
               website={article.link}
               memberPreview={article.memberPreview}
               title={article.title}

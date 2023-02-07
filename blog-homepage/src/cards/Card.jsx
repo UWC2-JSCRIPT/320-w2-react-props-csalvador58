@@ -14,6 +14,7 @@ function Card({
   date,
   description,
   image,
+  imageAlt,
   website,
   memberPreview,
   title,
@@ -33,7 +34,7 @@ function Card({
       <img
         className={isCardMain ? "" : classes["img-alt"]}
         src={image}
-        alt="main article jpeg"
+        alt={imageAlt}
         onClick={() => openSiteInTab(website)}
       />
       {/* {Create grid. Grid format is based on card rendering in Main or Lower section.} */}
@@ -87,6 +88,7 @@ Card.propTypes = {
   date: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  imageAlt: PropTypes.string.isRequired,
   website: PropTypes.string.isRequired,
   memberPreview: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
