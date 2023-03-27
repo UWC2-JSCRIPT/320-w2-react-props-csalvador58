@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.75rem 1rem -0.75rem 1rem;
+    opacity: 0.7;
+}
+
+.volume {
+    display: flex;
+    align-items: center;
+}
+
+.volume p {
+    padding-left: 0.5rem;
+}
+
+.volume img {
+  height: 30px;
+  width: auto;
+}
+
+.star {
+    display: flex;
+    align-items: center;
+}
